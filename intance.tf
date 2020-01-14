@@ -22,7 +22,7 @@ resource "aws_instance" "web" {
         "sudo systemctl enable httpd",
       ]
 
-
+  }
       
  
 tags = { 

@@ -1,5 +1,4 @@
 resource "aws_instance" "web" { 
-  count = 2
   ami           = "ami-00068cd7555f543d5"
   instance_type = "t2.micro" 
   associate_public_ip_address = "true" 
@@ -9,12 +8,6 @@ resource "aws_instance" "web" {
   
  
 tags = { 
-    Name = "HelloWorld${count.index +1}" 
+    Name = "HelloWorld" 
   } 
-}
-
-resource "aws_instance" "imported" {
-
-  ami           = "ami-00068cd7555f543d5"
-  key_name = aws_key_pair.deployer.key_name 
 }

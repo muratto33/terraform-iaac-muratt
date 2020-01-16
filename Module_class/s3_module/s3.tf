@@ -4,7 +4,7 @@ provider "aws"{
 
 
 
-module "bucket2" {
+module "bucket1" {
   source = "./modules"
   bucketname = "some-made-up-bucket-murat-1"
 }
